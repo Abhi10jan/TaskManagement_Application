@@ -6,15 +6,15 @@ const authenticateToken = require("./auth");
 
 router.post("/create-task", authenticateToken, async (req, res) => {
     try {
-        const { title, desc } = req.body; // Using 'des' instead of 'desc'
+        const { title, des } = req.body; // Using 'des' instead of 'desc'
         const { id } = req.headers; // Ensure the correct user ID is being sent
 
-        if (!title || !desc || !id) {
+        if (!title || !des || !id) {
             return res.status(400).json({ message: "All fields are required" });
         }
 
         // Create and save task
-        const newTask = new Task({ title, des : desc });
+        const newTask = new Task({ title, des : des });
         const saveTask = await newTask.save();
         const taskId = saveTask._id;
 
