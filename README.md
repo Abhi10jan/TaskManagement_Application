@@ -44,9 +44,3 @@ A sleek and efficient task management application built with **React.js** for th
 - **Authentication**: JWT-based authentication
 - **Icons & UI Components**: React Icons
 
-## 📦 Installation
-
-### 1️⃣ Clone the repository:
-```sh
-git clone https://github.com/yourusername/task-management-app.git
-cd task-management-app
