@@ -9,7 +9,14 @@ const cors = require("cors");
 const UserAPI = require("./routes/user");
 const TaskAPI = require("./routes/task");
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5000",
+    "https://task-frontend-0sil.onrender.com"  // 🔁 Paste your actual URL here
+  ],
+  credentials: true,
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
