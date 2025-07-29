@@ -26,7 +26,7 @@ const Alltasks = () => {
         },
       };
 
-      const response = await axios.get("http://localhost:5000/api/v2/get-all-tasks", headers);
+      const response = await axios.get("https://task-backend-bb9k.onrender.com/api/v2/get-all-tasks", headers);
       setData(response.data.data || []);
     } catch (error) {
       console.error("Error fetching tasks:", error.response?.data || error.message);

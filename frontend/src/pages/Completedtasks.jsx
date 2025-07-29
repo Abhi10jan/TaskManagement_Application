@@ -22,7 +22,7 @@ const Completedtasks = () => {
                   };
       
                   const response = await axios.get(
-                      "http://localhost:5000/api/v2/get-complete-tasks",
+                      "https://task-backend-bb9k.onrender.com/api/v2/get-complete-tasks",
                       headers
                   );
       

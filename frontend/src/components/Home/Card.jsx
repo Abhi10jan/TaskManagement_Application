@@ -13,7 +13,7 @@ const Cards = ({ home, setInputDiv, data = [], setUpdatedData, fetchTasks }) => 
 
   const handleCompleteTask = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/v2/update-complete-task/${id}`, {}, { headers });
+      await axios.put(`https://task-backend-bb9k.onrender.com/api/v2/update-complete-task/${id}`, {}, { headers });
       fetchTasks(); // ✅ refresh tasks
     } catch (error) {
       console.log(error);
@@ -22,7 +22,7 @@ const Cards = ({ home, setInputDiv, data = [], setUpdatedData, fetchTasks }) => 
 
   const handleImpTask = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/v2/update-imp-task/${id}`, {}, { headers });
+      await axios.put(`https://task-backend-bb9k.onrender.com/api/v2/update-imp-task/${id}`, {}, { headers });
       fetchTasks(); // ✅ refresh tasks
     } catch (error) {
       console.log(error);
@@ -31,7 +31,7 @@ const Cards = ({ home, setInputDiv, data = [], setUpdatedData, fetchTasks }) => 
 
   const deleteTask = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/v2/delete-task/${id}`, { headers });
+      await axios.delete(`https://task-backend-bb9k.onrender.com/api/v2/delete-task/${id}`, { headers });
       fetchTasks(); // ✅ refresh tasks
     } catch (error) {
       console.log(error);
