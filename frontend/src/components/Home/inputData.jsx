@@ -26,7 +26,7 @@ const InputData = ({ InputDiv, setInputDiv, UpdatedData, setUpdatedData, fetchTa
     };
 
     try {
-      await axios.post("http://localhost:5000/api/v2/create-task", Data, { headers });
+      await axios.post("https://task-backend-bb9k.onrender.com/api/v2/create-task", Data, { headers });
       setData({ title: "", des: "" });
       setInputDiv("hidden");
       fetchTasks(); // ✅ refresh tasks
@@ -48,7 +48,7 @@ const InputData = ({ InputDiv, setInputDiv, UpdatedData, setUpdatedData, fetchTa
     };
 
     try {
-      await axios.put(`http://localhost:5000/api/v2/update-task/${UpdatedData.id}`, Data, { headers });
+      await axios.put(`https://task-backend-bb9k.onrender.com/api/v2/update-task/${UpdatedData.id}`, Data, { headers });
       setUpdatedData({ id: "", title: "", des: "" });
       setData({ title: "", des: "" });
       setInputDiv("hidden");
